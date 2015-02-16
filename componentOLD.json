@@ -1,0 +1,25 @@
+{
+  "name": "SimpleSlim",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "tinymce": "~4.1.7"
+  },
+  "authors": [
+    "Nathan Bunney <nathan@Inventaweb.net>"
+  ],
+  "description": "A simple framework derived from the Slim Framework",
+  "keywords": [
+    "slim",
+    "framework"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ]
+}

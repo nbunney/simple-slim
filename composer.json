@@ -1,0 +1,15 @@
+{
+  "require": {
+    "php": ">=5.5.0",
+    "slim/slim": "~2.3.4",
+    "slim/views": "0.1.*",
+    "twig/twig": "1.16.*@dev",
+    "mailgun/mailgun-php": "~1.7.2",
+    "simogeo/Filemanager": "2.0.0"
+  },
+  "autoload": {
+    "classmap": [
+      "app/helpers"
+    ]
+  }
+}

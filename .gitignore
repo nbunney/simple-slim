@@ -1,0 +1,7 @@
+public_html/css/*
+public_html/js/*
+public_html/templates/*
+public_html/img/*
+node_modules/
+vendor/
+
