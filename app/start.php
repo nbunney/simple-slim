@@ -22,6 +22,8 @@ function authenticate(\Slim\Route $route) {
     return true;
 }
 
+require __DIR__.'/helpers/db.php';
+
 require __DIR__.'/security.php';
 
 require __DIR__.'/routes.php';

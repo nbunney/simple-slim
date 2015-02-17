@@ -1,13 +1,11 @@
-
-public function getConnection() {
+<?php
+function getConnection($app) {
   try {
-    $dbhost="localhost";
-    $dbuser="frag_user";
-    $dbpass="(6xzu;HH6.4T";
-    $dbname="frag_reports";
-    $dbh = new PDO("mysql:host=$dbhost;dbname=$dbname;charset=utf8", $dbuser, $dbpass, array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $dbh = new PDO("mysql:host={$app->config('MYSQL_HOST')};dbname={$app->config('MYSQL_DATABASE')};charset=utf8", $app->config('MYSQL_USER'), $app->config('MYSQL_PASS'), array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     return $dbh;
   }catch(PDOException $e){
+    print_r($e);
+    die();
     $app->render(500,array(
       'msg' => 'Database Connection Error'
     ));

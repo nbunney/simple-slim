@@ -85,20 +85,5 @@ gulp.task('less', function() {
     .pipe(gulp.dest(dest + 'img'));
 });
 
- // Watch for changes in files
-gulp.task('watch', function() {
-   // Watch .jade files
-  gulp.watch(src + 'templates/*.jade', ['jade']);
-   // Watch .html files
-  gulp.watch(src + 'templates/*.html', ['html']);
-   // Watch .js files
-  gulp.watch(src + 'scripts/*.js', ['scripts']);
-   // Watch .scss files
-  gulp.watch(src + 'styles/*.less', ['less']);
-   // Watch .scss files
-  gulp.watch(src + 'styles/*.css', ['css']);
-   // Watch image files
-  gulp.watch(src + 'assets/**/*', ['images']);
- });
  // Default Task
 gulp.task('default', ['scripts', 'css', 'less', 'images', 'html', 'jade']);
